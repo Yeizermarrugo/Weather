@@ -3,11 +3,11 @@ import CardWeather from './CardWeather'
 
 const Loader = () => {
   return (
-      <>
+    <>
       <div className="background">
-    <div className="loader">
-    </div>
-    </div>
+        <div className="loader">
+        </div>
+      </div>
     </>
   )
 }
