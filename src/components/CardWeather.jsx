@@ -11,14 +11,15 @@ const CardWeather = ({ weather, celcius, temp, click }) => {
   const iconurl = imgurl + weather?.weather[0].icon + ".png"
 
   useEffect(() => {
-    if (weather?.weather[0].description.includes("rain") || ("thunderstorm")) {
+    if (weather?.weather[0].description.includes("rain")) {
+      setPhotoBackground('rain')
+    }else if (weather?.weather[0].description.includes("thunderstorm")) {
       setPhotoBackground('rain')
     } else if (weather?.weather[0].description.includes("clear sky")) {
       setPhotoBackground('soleado')
     } else if (weather?.weather[0].description.includes('clouds')) {
       setPhotoBackground('nubes')
-    }
-    else if (weather?.weather[0].description.includes("clear sky") && `${hour}` > 18) {
+    }else if (weather?.weather[0].description.includes("clear sky") && `${hour}` > 18) {
       setPhotoBackground('noche')
     } else if (weather?.weather[0].description.includes("clouds") && `${hour}` > 18) {
       setPhotoBackground('nochenubes')
