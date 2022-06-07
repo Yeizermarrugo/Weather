@@ -1,0 +1,226 @@
+body{
+  margin: 0;
+  width: min(100%, 100%);
+}
+h1{
+  display: flex;
+  justify-content: center;
+}
+
+p{
+  font-size: 12px;
+}
+#root{
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  height: 100%;
+  
+}
+
+.App{
+  display: grid;
+  grid-template-columns:repeat(2,auto);
+  background-color: rgba(0, 181, 247, 0.54);
+  border-radius: 10%;
+  padding: 30px;
+  width: min(400px, 80%);
+  height: 40%;
+  box-shadow: 1px 1px 20px 0 #0009;
+  justify-content: center;
+  color: white;
+  
+}
+
+.city{
+  display: grid;
+  grid-column: 1/3;
+  margin-top: 5px;
+   margin-bottom: 10px;
+}
+
+.description{
+  display: grid;
+  grid-column: 2/3;
+  margin:5px;
+  text-transform: capitalize;
+}
+.cloud{
+  display: grid;
+  grid-column: 2/3;
+}
+
+p.description{
+  margin-bottom: 5px;
+  margin-top: 5px;
+  height: 30px;
+  }
+  p.description:nth-child(5) {
+    margin-top: -50px;
+  }
+
+.img{
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 4;
+  width: 100px;
+}
+
+.App > h6:nth-child(7) {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 20px;
+}
+
+.time{
+  display: grid;
+  grid-column:2/3;
+}
+
+.degrees{
+  display: grid;
+  grid-column:1/2;
+  grid-row: 6;
+}
+h6.time:nth-child(8) {
+  margin-top: -40px;
+  margin-bottom: 0px;
+  }
+
+  .rain{
+    background: url('./img/lluvia.jpg');
+    width: min(100%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .soleado{
+    background: url('./img/soleado.jpg') no-repeat;
+    width: min(100%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nubes{
+    background: url('./img/nubes.jpg') no-repeat;
+    width: min(100%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nochenubes{
+    background: url('./img/nochenubes.jpg') no-repeat;
+    width: min(100%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .noche{
+    background: url('./img/noche.jpg') no-repeat;
+    width: min(100%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #471177;
+    /* background: url('./img/forecast_loader.jpg') no-repeat; */
+    width: 100%;
+  }
+
+  .loader{
+    background: url('./img/Load.gif') no-repeat;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 26%;
+    height: 31%;
+    margin-top: 0px;
+    border-radius: 50%;
+  }
+
+ 
+
+  @media screen and (min-width: 780px) and (max-width: 1900) {
+    .App{
+      height: 30%;
+      width: 20%;
+    }
+    .loader{
+      background: url('./img/Load.gif') no-repeat;
+      margin-left: 18px;
+      margin-right: 0px;
+      margin-top: 63%;
+}
+.noche{
+  background: url('./img/noche(1).jpg') no-repeat;
+  width: min(100%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.soleado{
+  background: url('./img/soleado(1).jpg') no-repeat;
+  width: min(100%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  }
+ @media screen and (min-width: 300px) and (max-width:1200px){
+  .loader{
+    background: url('./img/Load.gif') no-repeat;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    height: 37%;
+    margin-top: 0px;
+    border-radius: 50%;
+} 
+.noche{
+  background: url('./img/noche(1).jpg') no-repeat;
+  width: min(100%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.soleado{
+  background: url('./img/soleado(1).jpg') no-repeat;
+  width: min(100%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ }
+  
+  @media screen and (max-width: 290px) {
+    .city{
+      font-size: 20px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+    .description{
+      font-size: 15px;
+    }
+    
+    .App{
+      height: 50%;
+      width: 20%;
+    }
+    .soleado{
+      background: url('./img/soleado(1).jpg') no-repeat;
+      width: min(100%, 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    
+  }
