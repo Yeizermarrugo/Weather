@@ -26,6 +26,14 @@ const CardWeather = ({ weather, celcius, temp, click }) => {
     }
   }, [weather])
 
+  useEffect(() => {
+    if (weather?.weather[0].description.includes("clear sky") && `${hour}` > 18) {
+      setPhotoBackground('noche')
+    } else if (weather?.weather[0].description.includes("clouds") && `${hour}` > 18) {
+      setPhotoBackground('nochenubes')
+    }
+  }, [weather])
+
 
   return (
     <div className={`${photoBackground}`}>
